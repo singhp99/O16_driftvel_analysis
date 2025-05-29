@@ -1,10 +1,10 @@
 from concurrent.futures import ProcessPoolExecutor, as_completed
-from tqdm.notebook import tqdm
+from tqdm import tqdm
 from event_processing import process_event
 import sys
 
-def parallelize(results,run_number,min_event, max_event, trace_file_path):
-    # results = []
+def parallelize(run_number,min_event, max_event, trace_file_path):
+    results = []
     with ProcessPoolExecutor() as executor:
         futures = {executor.submit(process_event, ev, trace_file_path): ev for ev in range(min_event, max_event)}
 

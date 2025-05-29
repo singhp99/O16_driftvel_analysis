@@ -1,0 +1,20 @@
+#!/bin/bash --login
+#SBATCH --job-name="driftvel_calc"
+#SBATCH --ntasks=1
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=16
+#SBATCH --mem=40G 
+#SBATCH --time=01:30:00
+
+
+module purge
+module load Python/3.12.3-GCCcore-13.3.0
+module list 
+
+source .venv/bin/activate
+python /mnt/home/singhp19/O16_driftvel_analysis/parallel_py/parallel_comb.py
+
+
+
+
+

@@ -10,7 +10,6 @@ import numpy as np
 from plotly.subplots import make_subplots
 from scipy import signal
 import tqdm as tqdm
-import matplotlib.pyplot as plt
 
 
 
