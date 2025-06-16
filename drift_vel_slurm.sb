@@ -4,7 +4,7 @@
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=20
 #SBATCH --mem=40G 
-#SBATCH --time=08:00:00
+#SBATCH --time=05:00:00
 
 
 module purge
@@ -12,9 +12,14 @@ module load Python/3.12.3-GCCcore-13.3.0
 module list 
 
 source .venv/bin/activate
-python /mnt/home/singhp19/O16_driftvel_analysis/parallel_py/parallel_comb.py
 
+current_time=$(date +"%Y-%m-%d %H:%M:%S")
+echo "Script started at: $current_time"
 
+python /mnt/home/singhp19/O16_driftvel_analysis/e20009_analysis_O16/run_spyral.py
+
+current_time=$(date +"%Y-%m-%d %H:%M:%S")
+echo "Script finished at: $current_time"
 
 
 
