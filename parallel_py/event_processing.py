@@ -59,7 +59,7 @@ def process_event(event_number, trace_file_path):
         micromg = props["left_ips"][0]
         window = props["right_ips"][0]
 
-        if micromg > 50:
+        if (micromg > 50) and (window < 506):
             return event_number,drift,micromg,window
 
         else:

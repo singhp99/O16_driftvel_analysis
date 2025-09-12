@@ -189,3 +189,5 @@ cython_debug/
 
 #SLURMS job requests
 .out
+
+e20020_analysis/
