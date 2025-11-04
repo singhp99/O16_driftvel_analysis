@@ -192,7 +192,5 @@ cython_debug/
 
 e20020_analysis/
 
-drift_vel_slurm.sb
-
 .venv/
 venv/
