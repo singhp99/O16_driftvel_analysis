@@ -27,12 +27,12 @@ from spyral import (
 from pathlib import Path
 import multiprocessing
 
-workspace_path = Path("/Volumes/researchEXT/O16/no_efield/no_field_only_1_2_tracks/")
-trace_path = Path("/Volumes/researchEXT/O16/no_efield/some_traces/")
+workspace_path = Path("/mnt/scratch/singhp19/spyral_v1.0_workspace")
+trace_path = Path("/mnt/scratch/singhp19/O16_runs")
 
-run_min = 59
-run_max = 60
-n_processes = 5
+run_min = 54
+run_max = 170
+n_processes = 18
 
 pad_params = PadParameters(
     pad_geometry_path=DEFAULT_MAP,
@@ -94,7 +94,7 @@ estimate_params = EstimateParameters(
 
 solver_params = SolverParameters(
     gas_data_path=Path("/mnt/home/singhp19/O16_driftvel_analysis/e20020_analysis/solver_gas_16O.json"),
-    particle_id_filename=Path("/mnt/home/singhp19/O16_driftvel_analysis/e20020_analysis/solver_particle_16O.json"),
+    particle_id_filename=Path("/mnt/home/singhp19/O16_driftvel_analysis/Spyral_v1.0/solver_particle_16O.json"),
     ic_min_val=300.0,
     ic_max_val=850.0,
     n_time_steps=1300,
