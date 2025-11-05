@@ -190,6 +190,8 @@ cython_debug/
 #SLURMS job requests
 .out/
 
+*.out
+
 e20020_analysis/
 
 .venv/
